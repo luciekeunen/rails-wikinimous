@@ -1,10 +1,14 @@
-<!-- <h1><%= @article.title %></h1>
-<p><%= @article.content %></p> -->
+<div id="show" class="main">
+  <div class="headers-inline">
+    <h1><%= @title %></h1>
+    <%= link_to edit_article_path do %>
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+    <% end %>
 
-<h1><%= @title %></h1>
-<p> <%= @content %> </p>
+    <%= link_to article_path, method: :delete do %>
+      <i class="fa fa-trash" aria-hidden="true"></i>
+    <% end %>
+  </div>
+  <p> <%= @content %> </p>
 
-<%= link_to "Edit article", edit_article_path %>
-<%= link_to "Delete article", article_path, method: :delete %>
-
-<%= link_to "See all articles", articles_path %>
+</div>

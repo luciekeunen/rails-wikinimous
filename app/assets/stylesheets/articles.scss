@@ -1,3 +1,60 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#navbar {
+  background-color: #F8F8F8;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 1px 3px rgba(100, 100, 100, 0.3);
+
+  .link {
+    padding: 0px 30px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+#index {
+  a {
+    color: rgb(100, 100, 100);
+  }
+}
+
+#show {
+  a {
+
+  }
+  .headers-inline {
+    display: flex;
+    align-items: center;
+  }
+
+  .headers-inline h1, .headers-inline p {
+    margin: 0px;
+    padding: 0px 15px 0px 0px;
+  }
+
+  i {
+    font-size: 2rem;
+    padding: 0px 5px;
+  }
+}
+
+.content {
+  height: 200px;
+}
