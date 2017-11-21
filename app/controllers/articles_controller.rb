@@ -6,6 +6,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @title = markdown(@article.title)
+    @content = markdown(@article.content)
   end
 
   def new
@@ -39,5 +41,9 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :content)
+  end
+
+  def markdown(text)
+    Kramdown::Document.new(text).to_html.html_safe
   end
 end
